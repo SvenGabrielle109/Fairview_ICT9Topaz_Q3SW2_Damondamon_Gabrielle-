@@ -68,17 +68,27 @@
 
 			<br>
 
-			<div class="col-md-4">
-				<button type="submit" class="btn btn-info btn-lg" onclick="plus()">Sum of A and B</button> <br> <br> 
+			<div class="col-md-6">
+			<div class="d-grid">
+				<button type="submit" class="btn btn-info btn-lg" onclick="plus()">What is the Sum of A and B?</button> <br> <br> 
 				
-				<button type="submit" class="btn btn-info btn-lg" onclick="sub()">Difference between A and B</button> <br> <br> 
+				<button type="submit" class="btn btn-info btn-lg" onclick="sub()">What is the Difference between A and B?</button> <br> <br> 
 				
-				<button type="submit" class="btn btn-info btn-lg" onclick="prod()">Product of A and B</button> <br> <br>
+				<button type="submit" class="btn btn-info btn-lg" onclick="prod()">What is the Product of A and B?</button> <br> <br>
 				
-				<button type="submit" class="btn btn-info btn-lg" onclick="quo()">Quotient of A and B</button> <br> <br> 
+				<button type="submit" class="btn btn-info btn-lg" onclick="quo()">What is the Quotient of A and B?</button> <br> <br> 
+
+				<button type="submit" class="btn btn-info btn-lg" onclick="greater()">Is A greater than B?</button> <br> <br> 
+
+				<button type="submit" class="btn btn-info btn-lg" onclick="less()">Is B less than A?</button> <br> <br> 
+
+				<button type="submit" class="btn btn-info btn-lg" onclick="logic1()">Is B is less than 23 and A is greater than 67?</button> <br> <br> 
+
+				<button type="submit" class="btn btn-info btn-lg" onclick="logic1()">Is A is greater than 12 or B is less than 34?</button> <br> <br> 
 
 				<a href="index.html"><button class="btn btn-success btn-lg">Refresh</button></a>
 			</div>
+		</div>
 		</center>
 	</section>
 	</center>
@@ -91,7 +101,6 @@
 			var ShowMe= document.getElementById('show').value;
 
 				window.alert("The sum of those two values is " + sum)
-
 		}
 
 		function sub(){
@@ -101,7 +110,6 @@
 			var ShowMe= document.getElementById('show').value;
 
 				window.alert("The difference between those two values is " + sum)
-
 		}
 
 		function prod(){
@@ -111,7 +119,6 @@
 			var ShowMe= document.getElementById('show').value;
 
 				window.alert("The product of those two values is " + sum)
-
 		}
 
 		function quo(){
@@ -121,7 +128,42 @@
 			var ShowMe= document.getElementById('show').value;
 
 				window.alert("The quotient of those two values is " + sum)
+		}
 
+		function greater(){
+			var num1= document.getElementById("num1").value;
+			var num2 = document.getElementById("num2").value;
+			var ans = Number(num1) < Number(num2);
+			var ShowMe= document.getElementById('show').value;
+
+				window.alert("They are " + ans)
+		}
+
+		function less(){
+			var num1= document.getElementById("num1").value;
+			var num2 = document.getElementById("num2").value;
+			var ans = Number(num2) < Number(num1);
+			var ShowMe= document.getElementById('show').value;
+
+				window.alert("They are " + ans)
+		}
+
+		function logic1(){
+			var num1= document.getElementById("num1").value;
+			var num2 = document.getElementById("num2").value;
+			var ans = Number(num2) < 23 && Number(num1) > 67;
+			var ShowMe= document.getElementById('show').value;
+
+				window.alert("They are " + ans)
+		}
+
+		function logic1(){
+			var num1= document.getElementById("num1").value;
+			var num2 = document.getElementById("num2").value;
+			var ans = Number(num1) > 12 || Number(num2) < 34;
+			var ShowMe= document.getElementById('show').value;
+
+				window.alert("They are " + ans)
 		}
 
 		function message(){
